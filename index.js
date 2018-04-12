@@ -123,7 +123,7 @@ Seoscan.prototype._flush = function(callback) {
  * @returns  {undefined} no return value
 */
 Seoscan.prototype.setRule = function(rules){
-  if(rules != undefined && rules instanceof Array){
+  if(rules != undefined && rules instanceof Array && _validateRules(rules)){
     //overwrite defaults
     this.rules = rules;
   }
